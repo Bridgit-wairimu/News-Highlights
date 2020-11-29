@@ -54,27 +54,27 @@ def process_newsResults(news_list):
 
 	return news_results
 
+# def get_news(name):
+# 	get_news_details_url = base_url.format(name,api_key)
 
-def get_news(name):
-    get_news_details_url = base_url.format(name,api_key)
+# 	with urllib.request.urlopen(get_news_details_url) as url:
+# 		news_details_data = url.read()
+# 		news_details_response = json.loads(news_details_data)
 
-    with urllib.request.urlopen(get_news_details_url) as url:
-        news_details_data = url.read()
-        news_details_response = json.loads(news_details_data)
+# 		news_object = None
+# 		if news_details_response:
+# 			name = news_details_response.get('name')
+# 			title = news_details_response.get('title')
+# 			description = news_details_response.get('description')
+# 			publishedAt = news_details_response.get('publishedAt')
+# 			content = news_details_response.get('content')
+# 			url = news_details_response.get('url')
+# 			urlToImage = news_details_response.get('urlToImage')
 
-        news_object = None
-        if news_details_response:
-			name = news_details_response.get('name')
-			title = news_details_response.get('title')
-			description = news_details_response.get('description')
-			publishedAt = news_details_response.get('publishedAt')
-			content = news_details_response.get('content')
-			url = news_details_response.get('url')
-			urlToImage = news_details_response.get('urlToImage')
+# 			news_object = News(name,title,description,publishedAt,content,url,urlToImage)
 
-            news_object = News(name,title,description,publishedAt,content,url,urlToImage)
+# 	return news_object
 
-    return news_object
 
 
 def search_news(news_name):

@@ -11,7 +11,6 @@ def index():
     View root page function that returns the index page and its data
     '''
     # Getting popular news
-    title = 'Home - Welcome to The best News Review Website Online'
     popular_news = get_news('popular')
     upcoming_news = get_news('upcoming')
     trendy_news = get_news('trendy')
@@ -22,19 +21,19 @@ def index():
     if search_news:
         return redirect(url_for('search',news_name=search_news))
     else:
-        return render_template('index.html', title = title, popular = popular_news, upcoming = upcoming_news, trendy= trendy_news)
+        return render_template('index.html', title = title, popular = popular_news, upcoming = upcoming_news, trendy = trendy_news)
 
 
-@app.route('/news/<int:name>')
-def news(name):
+# @app.route('/news/<int:name>')
+# def news(name):
 
-    '''
-    View news page function that returns the news details page and its data
-    '''
-    news = get_news(name)
-    title = f'{movie.title}'
+#     '''
+#     View news page function that returns the news details page and its data
+#     '''
+#     news = get_news(name)
+#     title = f'{news.title}'
 
-    return render_template('news.html',title = title,news= news)
+#     return render_template('news.html',title = title,news= news)
 
 
 @app.route('/search/<news_name>')

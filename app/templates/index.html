@@ -13,25 +13,25 @@
 
 <div class="container">
     <form>
-        <input type="text" name="movie_query" placeholder="Search for a News" class="form-control">
+        <input type="text" name="movie_query" placeholder="Search for a News" class="form-control"> </br>
         <input type="submit"  value="Submit" class="btn btn-default">
     </form>
 
         <!-- popular news -->
-        <h3> Popular News</h3>
+        <h1> Popular News</h1>
          <ul>
             {{ macro.displayNewsList(popular)}}
 
         </ul>
 
         <!-- source news  -->
-        <h3> Upcoming News </h3>
+        <h2> Upcoming News </h2>
          <ul>
             {{ macro.displayNewsList(upcoming)}}
 
         </ul>
         <!-- trendy news -->
-        <h3>Trendy</h3>
+        <h3>Trendy</h4>
          <ul>
            {{ macro.displayNewsList(trendy)}}
 
