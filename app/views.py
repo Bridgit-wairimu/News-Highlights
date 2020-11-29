@@ -24,16 +24,16 @@ def index():
         return render_template('index.html', title = title, popular = popular_news, upcoming = upcoming_news, trendy = trendy_news)
 
 
-# @app.route('/news/<int:name>')
-# def news(name):
+# @app.route('/news/<int:id>')
+# def news(id):
 
 #     '''
 #     View news page function that returns the news details page and its data
 #     '''
-#     news = get_news(name)
+#     news = get_news(id)
 #     title = f'{news.title}'
 
-#     return render_template('news.html',title = title,news= news)
+#     return render_template('news.html',title = title,news = news)
 
 
 @app.route('/search/<news_name>')

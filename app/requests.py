@@ -37,7 +37,7 @@ def process_newsResults(news_list):
 
 	news_results = []
 	for news_item in news_list:
-		name = news_item.get('name')
+		id = news_item.get('id')
 		title = news_item.get('title')
 		description = news_item.get('description')
 		publishedAt = news_item.get('publishedAt')
@@ -49,13 +49,13 @@ def process_newsResults(news_list):
 		publishedAt = date_time_obj.date()
 
 		if urlToImage:
-			news_object = News(name,title,description,publishedAt,content,url,urlToImage)
+			news_object = News(id,title,description,publishedAt,content,url,urlToImage)
 			news_results.append(news_object)
 
 	return news_results
 
-# def get_news(name):
-# 	get_news_details_url = base_url.format(name,api_key)
+# def get_news(id):
+# 	get_news_details_url = base_url.format(id,api_key)
 
 # 	with urllib.request.urlopen(get_news_details_url) as url:
 # 		news_details_data = url.read()
@@ -63,7 +63,7 @@ def process_newsResults(news_list):
 
 # 		news_object = None
 # 		if news_details_response:
-# 			name = news_details_response.get('name')
+# 			id = news_details_response.get('id')
 # 			title = news_details_response.get('title')
 # 			description = news_details_response.get('description')
 # 			publishedAt = news_details_response.get('publishedAt')
@@ -71,7 +71,7 @@ def process_newsResults(news_list):
 # 			url = news_details_response.get('url')
 # 			urlToImage = news_details_response.get('urlToImage')
 
-# 			news_object = News(name,title,description,publishedAt,content,url,urlToImage)
+# 			news_object = News(id,title,description,publishedAt,content,url,urlToImage)
 
 # 	return news_object
 
