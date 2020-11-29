@@ -17,23 +17,46 @@
         <input type="submit"  value="Submit" class="btn btn-default">
     </form>
 
-        <!-- popular news -->
-        <h1> Popular News</h1>
-         <ul>
-            {{ macro.displayNewsList(popular)}}
+    
+        <!-- source news -->
+        <!-- <div class="col-md-3">
+            <div class="sidebar-right">
+                {% for source in sources %}
+                <li class="story-highlight sources-highlight line-clamp-2">
+                    <a href="{{ source.source_url }}"><span>{{ source.id }}</span></a>&nbsp;
+                    <a href="{{ source.source_url }}">{{ source.name }}</a>
+                </li>
+                {% endfor %}
+            </div>
+        </div>
+    </div> -->
 
-        </ul>
+    <div class="col-md-6">
+        <div class="story-highlight top-highlight">
+            <h6>12&nbsp;minutes&nbsp;ago</h6>
+            <p><a href="">Ex Radio Presenter: We suffered after Rose Kamotho sold Kameme fm</a></p>
+            <figure class="">
+                <a href=""><img src="{{url_for('static',filename='images/radio.jpg')}}" alt=""></a>
+            </figure>
+            <p>Nairobi Traders in fear over planned evictions</p>
+            <figure class="">
+                <a href=""><img src="{{url_for('static',filename='images/traders.webp')}}" alt=""></a>
+            </figure>
+            
+        </div>
 
-        <!-- source news  -->
-        <h2> Upcoming News </h2>
-         <ul>
-            {{ macro.displayNewsList(upcoming)}}
-
-        </ul>
-        <!-- trendy news -->
-        <h3>Trendy</h4>
-         <ul>
-           {{ macro.displayNewsList(trendy)}}
-
-        </ul>
+        {% for news in category %}
+				<div class="story-highlight ">
+					<h6>5 &nbsp;hours&nbsp;ago</h6>
+					<div>
+						<figure>
+							<a href=""> <img src="{{ news.urlToImage }}" alt=""></a>
+						</figure>
+						<h4 class="line-clamp-2"><a href="{{ news.url }}">{{ news.title }}</a></h4>
+						<p class="line-clamp-2">{{ news.description }}</p>
+						<p class="publish-date">Published at <strong>{{ news.publishedAt }}</strong></p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
 {% endblock %}        
