@@ -11,8 +11,8 @@ def index():
     View root page function that returns the index page and its data
     '''
     # Getting popular news
-    category_news = get_news('us')
-    sources_news = get_sources()
+    category_news = get_news('category_news')
+    sources_news = get_sources('sources_news')
 
     title = 'Home - Welcome to The best News Review Website Online'
 
