@@ -86,10 +86,11 @@ def process_sourcesResults(sources_list):
 
 	sources_results = []
 	for source_item in sources_list:
-		id = source_item.get('id')
 		name = source_item.get('name')
+		author = source_item.get('author')
+		content = source_item.get('content')
 
-		source_object = Sources(id,name)
+		source_object = Sources(name,author,content)
 		sources_results.append(source_object)
 
 	return sources_results

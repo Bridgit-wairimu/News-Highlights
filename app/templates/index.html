@@ -9,32 +9,18 @@
 {% endblock %}
 
 <!-- Content block-->
-{% block content %}
-
-    <h5>Welcome to News Highlights</h5>
-        <!-- source news -->
-        <!-- <div class="col-md-3">
-            <div class="sidebar-right">
-                {% for source in sources %}
-                <li class="story-highlight sources-highlight line-clamp-2">
-                    <a href="{{ source.source_url }}"><span>{{ source.id }}</span></a>&nbsp;
-                    <a href="{{ source.source_url }}">{{ source.name }}</a>
-                </li>
-                {% endfor %}
-            </div>
-        </div>
-    </div> -->
-
+{% block content %}        
     <div class="col-md-6">
+        <h5>Welcome to News Highlights</h5>
         <div class="top-highlight">
             <h6>20&nbsp;minutes&nbsp;ago</h6>
             <p><a href="">Ex Radio Presenter: We suffered after Rose Kamotho sold Kameme fm</a></p>
             <figure class="">
-                <a href=""><img src="{{url_for('static',filename='images/radio.jpg')}}" width="250px" height="110px"></a>
+                <a href=""><img src="{{url_for('static',filename='images/radio.jpg')}}" width="200px" height="110px"></a>
             </figure>
             <p><a href="">Nairobi Traders in fear over planned evictions</a></p>
             <figure class="">
-                <a href=""><img src="{{url_for('static',filename='images/traders.webp')}}" width="250px" height="110px"></a>
+                <a href=""><img src="{{url_for('static',filename='images/traders.webp')}}" width="200px" height="110px"></a>
             </figure>
             
         </div>
@@ -43,12 +29,25 @@
         <div class="col-md-6">
 				<div class="storyhighlight ">
 					<h6>7 &nbsp;hours&nbsp;ago</h6>
-                        <figure class="img"><a href=""> <img src="{{ news.urlToImage }}" width="250px" height="110px"></a></figure>
+                        <figure class="img"><a href=""> <img src="{{ news.urlToImage }}" width="200px" height="110px"></a></figure>
 						<h4 class="title"><a href="{{ news.url }}">{{ news.title }}</a></h4>
 						<p class="description">{{ news.description }}</p>
 						<p class="published">Published at <strong>{{ news.publishedAt }}</strong></p>
 					</div>
                 </div>
                 </div>
+
+
+                <div class="col-md-9">
+                    <div class="sidebar-left">
+                        {% for source in sources %}
+                        <li class="story-highlight sources-highlight">
+                            <a href="{{ source.source_url }}">{{ source.author }}</a>
+
+                        </li>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
 				{% endfor %}
 {% endblock %}        
