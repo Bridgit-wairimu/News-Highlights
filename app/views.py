@@ -12,7 +12,7 @@ def index():
     '''
     # Getting popular news
     category_news = get_news('category_news')
-    sources_news = get_sources('sources_news')
+    sources_news = get_sources()
 
     title = 'Home - Welcome to The best News Review Website Online'
 

@@ -11,7 +11,8 @@
 <!-- Content block-->
 {% block content %}        
     <div class="col-md-6">
-        <h5>Welcome to News Highlights</h5>
+        <h5 style="font-size: xx-large; color:yellow;  text-align: center;     font-family: 'Yesteryear', cursive, serif;" >Welcome to News Highlights</h5>
+
         <div class="top-highlight">
             <h6>20&nbsp;minutes&nbsp;ago</h6>
             <p><a href="">Ex Radio Presenter: We suffered after Rose Kamotho sold Kameme fm</a></p>
@@ -25,6 +26,19 @@
             
         </div>
 
+
+        <div class="col-md-6">
+            <div class="sidebar-left">
+                {% for source in sources %}
+                <li class="story-highlight sources-highlight">
+                    <a href="{{ source.source_url }}">{{ source.author}}</a>
+
+                </li>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
         {% for news in category %}
         <div class="col-md-6">
 				<div class="storyhighlight ">
@@ -36,18 +50,5 @@
 					</div>
                 </div>
                 </div>
-
-
-                <div class="col-md-9">
-                    <div class="sidebar-left">
-                        {% for source in sources %}
-                        <li class="story-highlight sources-highlight">
-                            <a href="{{ source.source_url }}">{{ source.author }}</a>
-
-                        </li>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
 				{% endfor %}
 {% endblock %}        
