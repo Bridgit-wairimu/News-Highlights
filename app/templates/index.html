@@ -26,29 +26,29 @@
     </div> -->
 
     <div class="col-md-6">
-        <div class="story-highlight top-highlight">
+        <div class="top-highlight">
             <h6>12&nbsp;minutes&nbsp;ago</h6>
             <p><a href="">Ex Radio Presenter: We suffered after Rose Kamotho sold Kameme fm</a></p>
             <figure class="">
-                <a href=""><img src="{{url_for('static',filename='images/radio.jpg')}}" alt=""></a>
+                <a href=""><img src="{{url_for('static',filename='images/radio.jpg')}}" width="250px" height="110px"></a>
             </figure>
-            <p>Nairobi Traders in fear over planned evictions</p>
+            <p><a href="">Nairobi Traders in fear over planned evictions</a></p>
             <figure class="">
-                <a href=""><img src="{{url_for('static',filename='images/traders.webp')}}" alt=""></a>
+                <a href=""><img src="{{url_for('static',filename='images/traders.webp')}}" width="250px" height="110px"></a>
             </figure>
             
         </div>
 
         {% for news in category %}
-				<div class="story-highlight ">
+				<div class="storyhighlight ">
 					<h6>5 &nbsp;hours&nbsp;ago</h6>
 					<div>
-						<figure>
-							<a href=""> <img src="{{ news.urlToImage }}" alt=""></a>
-						</figure>
-						<h4 class="line-clamp-2"><a href="{{ news.url }}">{{ news.title }}</a></h4>
-						<p class="line-clamp-2">{{ news.description }}</p>
-						<p class="publish-date">Published at <strong>{{ news.publishedAt }}</strong></p>
+                            
+                        <figure class="img"><a href=""> <img src="{{ news.urlToImage }}" width="250px" height="110px"></a></figure>
+                        
+						<h4 class="title"><a href="{{ news.url }}">{{ news.title }}</a></h4>
+						<p class="description">{{ news.description }}</p>
+						<p class="published">Published at <strong>{{ news.publishedAt }}</strong></p>
 					</div>
 				</div>
 				{% endfor %}
