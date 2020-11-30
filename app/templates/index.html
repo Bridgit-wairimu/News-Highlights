@@ -27,7 +27,7 @@
 
     <div class="col-md-6">
         <div class="top-highlight">
-            <h6>12&nbsp;minutes&nbsp;ago</h6>
+            <h6>20&nbsp;minutes&nbsp;ago</h6>
             <p><a href="">Ex Radio Presenter: We suffered after Rose Kamotho sold Kameme fm</a></p>
             <figure class="">
                 <a href=""><img src="{{url_for('static',filename='images/radio.jpg')}}" width="250px" height="110px"></a>
@@ -40,17 +40,15 @@
         </div>
 
         {% for news in category %}
+        <div class="col-md-6">
 				<div class="storyhighlight ">
-					<h6>5 &nbsp;hours&nbsp;ago</h6>
-					<div>
-                            
+					<h6>7 &nbsp;hours&nbsp;ago</h6>
                         <figure class="img"><a href=""> <img src="{{ news.urlToImage }}" width="250px" height="110px"></a></figure>
-                        
 						<h4 class="title"><a href="{{ news.url }}">{{ news.title }}</a></h4>
 						<p class="description">{{ news.description }}</p>
 						<p class="published">Published at <strong>{{ news.publishedAt }}</strong></p>
 					</div>
-				</div>
+                </div>
+                </div>
 				{% endfor %}
-			</div>
 {% endblock %}        
