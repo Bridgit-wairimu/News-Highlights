@@ -1,10 +1,10 @@
 from flask import render_template,request,redirect,url_for
-from app import app
-from .requests import get_news,get_sources
+from  .import main
+from ..requests import get_news,get_sources
 
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
