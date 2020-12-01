@@ -52,7 +52,6 @@
 
 #### after that you are ready to go
 
- 
  # Technologies used
 
 #### python version (3.6.3)
