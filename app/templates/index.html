@@ -9,25 +9,24 @@
 {% endblock %}
 
 <!-- Content block-->
-{% block content %}        
-    <div class="col-md-6">
-        <h5 style="font-size: xx-large; color:yellow;  text-align: center;     font-family: 'Yesteryear', cursive, serif;" >Welcome to News Highlights</h5>
-
+{% block content %}  
+    <div class="container">     
+    <div class="col-md-5">
         <div class="top-highlight">
             <h6>20&nbsp;minutes&nbsp;ago</h6>
-            <p><a href="">Ex Radio Presenter: We suffered after Rose Kamotho sold Kameme fm</a></p>
+            <p><a href="https://www.kenyans.co.ke/">Ex Radio Presenter: We suffered after Rose Kamotho sold Kameme fm</a></p>
             <figure class="">
-                <a href=""><img src="{{url_for('static',filename='images/radio.jpg')}}" width="200px" height="110px"></a>
+                <a href=""><img src="{{url_for('static',filename='images/radio.jpg')}}" width="250px" height="140px"></a>
             </figure>
-            <p><a href="">Nairobi Traders in fear over planned evictions</a></p>
+            <p><a href="https://www.kenyans.co.ke/">Nairobi Traders in fear over planned evictions</a></p>
             <figure class="">
-                <a href=""><img src="{{url_for('static',filename='images/traders.webp')}}" width="200px" height="110px"></a>
+                <a href=""><img src="{{url_for('static',filename='images/traders.webp')}}" width="250px" height="140px"></a>
             </figure>
-            
+            </div>
         </div>
 
 
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
             <div class="sidebar-left">
                 {% for source in sources %}
                 <li class="story-highlight sources-highlight">
@@ -37,18 +36,18 @@
                 {% endfor %}
             </div>
         </div>
-    </div>
+    </div> -->
 
         {% for news in category %}
-        <div class="col-md-6">
-				<div class="storyhighlight ">
+        <div class="col-md-5">
+				<div style="vertical-align: sub;" class="storyhighlight ">
 					<h6>7 &nbsp;hours&nbsp;ago</h6>
-                        <figure class="img"><a href=""> <img src="{{ news.urlToImage }}" width="200px" height="110px"></a></figure>
+                        <figure class="img"><a href=""> <img src="{{ news.urlToImage }}" width="250px" height="140px"></a></figure>
 						<h4 class="title"><a href="{{ news.url }}">{{ news.title }}</a></h4>
-						<p class="description">{{ news.description }}</p>
+						<p  style = "font-weight: 700; border-width: 10px;" class="description" width="50px" height="25px">{{ news.description }} </p>
 						<p class="published">Published at <strong>{{ news.publishedAt }}</strong></p>
 					</div>
                 </div>
-                </div>
+            </div>
 				{% endfor %}
 {% endblock %}        
