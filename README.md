@@ -18,6 +18,21 @@
 #### . cd News-Highlight
 #### . then code in atom or any text editor you may prefer.
 
+# User Stories
+#### . to click on an article and read it fully from the news source
+#### . to see the image,description and time the news article was created
+#### . to see all the news articles from the news source
+#### to see various news articles on the homepage
+
+
+# Behaviour Driven Development
+#### | Behaviour | input | output |
+
+#### | Display image,description,title and the day it was published | N/A | The articles image,title,description,title and date it was published|
+
+#### | Read the entire article | click on the title of the article | directed to the main source site to read the entire article |
+
+
 # Running the app
 
 #### after cloning the app you have to create a test class and the class it self 
@@ -41,6 +56,9 @@
  # Technologies used
 
 #### python version (3.6.3)
+
+# Live Link
+#### https://news-bridgit.herokuapp.com/
  
 # Contact details
   #### if you have any queires just contact me via my email (kirikabridgit@gmail.com) or my phone number 0707285907
